@@ -1,0 +1,66 @@
+{
+  "$schema": "http://localhost:3000/schemas/v1.json",
+  "name": "hello-world",
+  "namespace": "kernel",
+  "description": "Enter a short description of your component",
+  "displayName": "Hello World Components",
+  "version": "0.1.1",
+  "type": "edge",
+  "mainFunction": "main",
+  "icon": {
+    "id": "announcement",
+    "color": {
+      "type": "enum",
+      "value": "gray"
+    }
+  },
+  "functions": [
+    {
+      "name": "main",
+      "entry": "main.js",
+      "input": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          }
+        },
+        "required": []
+      },
+      "output": {
+        "responseType": "html"
+      }
+    }
+  ],
+  "staticFiles": {
+    "locationRoot": ""
+  },
+  "previews": {
+    "default": {
+      "functionData": {
+        "main": {
+          "inputData": {
+            "type": "file",
+            "path": "example.data.json"
+          },
+          "wrapper": {
+            "path": "preview.html"
+          }
+        }
+      }
+    },
+    "dxp": {
+      "functionData": {
+        "main": {
+          "inputData": {
+            "type": "file",
+            "path": "example.data.json"
+          },
+          "wrapper": {
+            "path": "preview-dxp.html"
+          }
+        }
+      }
+    }
+  }
+}

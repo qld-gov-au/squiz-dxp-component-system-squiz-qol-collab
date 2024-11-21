@@ -1,0 +1,47 @@
+[
+  {
+    "id": "11654",
+    "heading": "Card 1",
+    "link": "https://ssqld-web-uat.matrix.squiz.cloud/qgds-bs5/demo/components/card/card-list/card-1",
+    "leadText": "Description of Card 1",
+    "image": {
+      "url": "https://ssqld-web-uat.matrix.squiz.cloud/__data/assets/image/0024/11679/mikhail-vasilyev-IFxjDdqK_0U-unsplash.jpg",
+      "attributes": {
+        "id": "11679",
+        "alt": "Cat",
+        "width": "5184",
+        "height": "3456"
+      }
+    }
+  },
+  {
+    "id": "11658",
+    "heading": "Card 2",
+    "link": "https://ssqld-web-uat.matrix.squiz.cloud/qgds-bs5/demo/components/card/card-list/card-2",
+    "leadText": "Description of Card 2",
+    "image": {
+      "url": "https://ssqld-web-uat.matrix.squiz.cloud/__data/assets/image/0024/11679/mikhail-vasilyev-IFxjDdqK_0U-unsplash.jpg",
+      "attributes": {
+        "id": "11679",
+        "alt": "Cat",
+        "width": "5184",
+        "height": "3456"
+      }
+    }
+  },
+  {
+    "id": "11662",
+    "heading": "Card 3",
+    "link": "https://ssqld-web-uat.matrix.squiz.cloud/qgds-bs5/demo/components/card/card-list/card-3",
+    "leadText": "Description of Card 3",
+    "image": {
+      "url": "https://ssqld-web-uat.matrix.squiz.cloud/__data/assets/image/0024/11679/mikhail-vasilyev-IFxjDdqK_0U-unsplash.jpg",
+      "attributes": {
+        "id": "11679",
+        "alt": "Cat",
+        "width": "5184",
+        "height": "3456"
+      }
+    }
+  }
+]

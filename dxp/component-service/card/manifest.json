@@ -1,0 +1,115 @@
+{
+    "$schema": "http://localhost:3000/schemas/v1.json#",
+    "version": "0.0.1",
+    "name": "card",
+    "displayName": "Card Component",
+    "description": "QGDS Bootstrap 5 - Card Component",
+    "namespace": "qgds-bs5-local",
+    "mainFunction": "main",
+    "type": "edge",
+    "environment": [
+        { "name": "BASE_DOMAIN", "required": true },
+        { "name": "API_PATH", "required": true }
+    ],
+    "icon": {
+        "id": "web_stories",
+        "color": {
+            "type": "hex",
+            "value": "#ae71ff"
+        }
+    },
+    "functions": [
+        {
+            "name": "main",
+            "entry": "main.js",
+            "input": {
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "type": "string",
+                        "title": "Title"
+                    },
+                    "description": {
+                        "type": "FormattedText",
+                        "title": "Description"
+                    },
+                    "date": {
+                        "type": "string",
+                        "format": "date-time",
+                        "title": "Date"
+                    },
+                    "variantClass": {
+                        "type": "string",
+                        "title": "Variant"
+                    },
+                    "image": {
+                        "type": "SquizImage",
+                        "title": "Image"
+                    },
+                    "imagAlt": {
+                        "type": "string",
+                        "title": "Image alt"
+                    },
+                    "iconClasses": {
+                        "type": "string",
+                        "title": "Icon classes"
+                    },
+                    "iconPosition": {
+                        "type": "string",
+                        "title": "Icon position"
+                    },
+                    "action": {
+                        "type": "string",
+                        "title": "Action"
+                    },
+                    "link": {
+                        "type": "string",
+                        "title": "Link"
+                    },
+                    "arrow": {
+                        "type": "string",
+                        "title": "Arrow",
+                        "enum": ["Yes", "No"]
+                    },
+                    "video": {
+                        "type": "string",
+                        "title": "Video",
+                        "enum": ["Yes", "No"]
+                    },
+                    "videoDuration": {
+                        "type": "string",
+                        "title": "Video duration"
+                    },
+                    "footer": {
+                        "type": "FormattedText",
+                        "title": "Footer"
+                    },
+                    "equalHeight": {
+                        "type": "string",
+                        "title": "Equal height",
+                        "enum": ["Yes", "No"]
+                    }
+                },
+                "required": []
+            },
+            "output": {
+                "responseType": "html"                
+            }
+        }
+    ],
+    "previews": {
+        "default": {
+            "functionData": {
+                "main": {
+                    "inputData": {
+                        "type": "file",
+                        "path": "example.data.json"
+                    },
+                    "wrapper": {
+                        "path": "preview.html"
+                    }
+                }
+            }
+        }
+    }
+}

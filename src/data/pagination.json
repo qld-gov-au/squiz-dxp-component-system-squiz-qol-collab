@@ -1,0 +1,32 @@
+[
+    {
+        "href": "#",
+        "linktext": "1",
+        "customClasses": "",
+        "more": false
+    },
+    {
+        "href": "#",
+        "linktext": "2",
+        "customClasses": "active",
+        "more": false
+    },
+    {
+        "href": "#",
+        "linktext": "3",
+        "customClasses": "more",
+        "more": true
+    },
+    {
+        "href": "#",
+        "linktext": "6",
+        "customClasses": "",
+        "more": false
+    },
+    {
+        "href": "#",
+        "linktext": "7",
+        "customClasses": "",
+        "more": false
+    }
+]

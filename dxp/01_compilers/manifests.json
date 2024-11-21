@@ -1,0 +1,14 @@
+[
+  "qgds-bs5-local/video/1.0.1",
+  "qgds-bs5-local/tag-dynamic/0.0.1",
+  "qgds-bs5-local/table/1.0.1",
+  "qgds-bs5-local/pagination/0.0.1",
+  "qgds-bs5-local/inpagealert/1.0.0",
+  "qgds-bs5-local/card-dynamic/0.0.2",
+  "qgds-bs5-local/card/0.0.1",
+  "qgds-bs5-local/callout/1.0.1",
+  "qgds-bs5-local/blockquote/1.0.1",
+  "qgds-bs5-local/accordion-dynamic/0.0.2",
+  "qgds-bs5-local/accordion/1.0.1",
+  "kernel/hello-world/0.1.1"
+]

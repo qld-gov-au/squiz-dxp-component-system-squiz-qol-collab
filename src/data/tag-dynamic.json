@@ -1,0 +1,22 @@
+[
+    {
+        "id": "id1",
+        "content": "label 1",
+        "classes": ""
+    },
+    {
+        "id": "id2",
+        "content": "label 2",
+        "classes": ""
+    },
+    {
+        "id": "Id3",
+        "content": "label 3",
+        "classes": ""
+    },
+    {
+        "id": "id4",
+        "content": "label 4",
+        "classes": ""
+    }
+]

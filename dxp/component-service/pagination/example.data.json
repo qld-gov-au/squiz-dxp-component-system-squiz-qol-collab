@@ -1,0 +1,16 @@
+{
+	"component_options": {
+		"arialabel": "Aria label",
+		"pages": "matrix-asset://matrixIdentifier/3100"
+	},
+	"previous_options": {
+		"prevHref": "#",
+		"prevLinkText": "Back",
+        "prevAriaLabel": "Previous page"
+	},
+	"next_options": {
+		"nextHref": "#",
+		"nextLinkText": "Next",
+        "nextAriaLabel": "Next page"
+	}
+}

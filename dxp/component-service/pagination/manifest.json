@@ -1,0 +1,112 @@
+{
+    "$schema": "http://localhost:3000/schemas/v1.json#",
+    "version": "0.0.1",
+    "name": "pagination",
+    "displayName": "Pagination Component",
+    "description": "QGDS Bootstrap 5 - Pagination Component",
+    "namespace": "qgds-bs5-local",
+    "mainFunction": "main",
+    "type": "edge",
+    "environment": [
+        { "name": "BASE_DOMAIN", "required": true },
+        { "name": "API_PATH", "required": true }
+    ],
+    "icon": {
+        "id": "queue",
+        "color": {
+            "type": "hex",
+            "value": "#ae71ff"
+        }
+    },
+    "functions": [
+        {
+            "name": "main",
+            "entry": "main.js",
+            "input": {
+                "type": "object",
+                "properties": {
+                    "component_options": {
+                        "title": "Component options",
+                        "type": "object",
+                        "properties": {
+                            "arialabel": {
+                                "type": "string",
+                                "title": "arialabel",
+                                "default": "Pagination for search results"
+                            },
+                            "pages": {
+                                "type": "string",
+                                "format": "matrix-asset-uri",
+                                "title": "Pages"
+                            }
+                        },
+                        "required": ["arialabel","pages"]
+                    },
+                    "previous_options": {
+                        "title": "Previous options",
+                        "type": "object",
+                        "properties": {
+                            "prevHref": {
+                                "type": "string",
+                                "title": "href",
+                                "default": "#"
+                            },
+                            "prevLinkText": {
+                                "type": "string",
+                                "title": "Link text",
+                                "default": "Back"
+                            },
+                            "prevAriaLabel": {
+                                "type": "string",
+                                "title": "arialabel",
+                                "default": "Previous page"
+                            }
+                        },
+                        "required": ["prevHref","prevLinkText","prevAriaLabel"]
+                    },
+                    "next_options": {
+                        "title": "Next options",
+                        "type": "object",
+                        "properties": {
+                            "nextHref": {
+                                "type": "string",
+                                "title": "href",
+                                "default": "#"
+                            },
+                            "nextLinkText": {
+                                "type": "string",
+                                "title": "Link text",
+                                "default": "Next"
+                            },
+                            "nextAriaLabel": {
+                                "type": "string",
+                                "title": "arialabel",
+                                "default": "Next page"
+                            }
+                        },
+                        "required": ["nextHref","nextLinkText","nextAriaLabel"]
+                    }
+                },
+                "required": []
+            },
+            "output": {
+                "responseType": "html"                
+            }
+        }
+    ],
+    "previews": {
+        "default": {
+            "functionData": {
+                "main": {
+                    "inputData": {
+                        "type": "file",
+                        "path": "example.data.json"
+                    },
+                    "wrapper": {
+                        "path": "preview.html"
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "groupid": "accordion-group-3008",
+    "accordionItems": [
+        {
+            "id": "accordion-3009-1",
+            "title": "Dynamic Accordion item 1",
+            "subtitle": "",
+            "icon": "",
+            "content": "<p>Dynamic Accordion item 1 body</p>",
+            "expanded": true
+        },
+        {
+            "id": "accordion-3010-2",
+            "title": "Dynamic Accordion item 2",
+            "subtitle": "",
+            "icon": "",
+            "content": "<p>Dynamic Accordion&nbsp;&nbsp;item 2 body</p>",
+            "expanded": false
+        }
+    ]
+}

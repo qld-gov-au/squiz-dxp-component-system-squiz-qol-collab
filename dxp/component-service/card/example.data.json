@@ -1,0 +1,32 @@
+{
+	"title": "test",
+	"description": "<p>Example short paragraph text description</p>",
+	"date": "2024-11-21T23:41:00.000Z",
+	"variantClass": "variantdvfv",
+	"image": {
+		"name": "My Image",
+		"alt": "The alt if the image doesn't load",
+		"caption": "This above is a loaded image",
+		"imageVariations": {
+		  "original": {
+			"url": "https://placehold.co/600x400",
+			"width": 100,
+			"height": 100,
+			"byteSize": 1000,
+			"mimeType": "image/jpeg",
+			"aspectRatio": "1:1",
+			"sha1Hash": "1234567890abcdef1234567890abcdef12345678"
+		  }
+		}
+	  },
+	"imagAlt": "alt tag",
+	"iconClasses": "fa-solid fa-pen-ruler",
+	"iconPosition": "icon-left",
+	"action": "None",
+	"link": "http://localhost:3000/#/c/qgds-bs5-local/card/0.0.1",
+	"arrow": "Yes",
+	"video": "No",
+	"videoDuration": "10 minutes",
+	"footer": "<ul><li>List item 1</li><li>List item 2</li></ul>",
+	"equalHeight": "Yes"
+}

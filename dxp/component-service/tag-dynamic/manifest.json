@@ -1,0 +1,61 @@
+{
+  "$schema": "http://localhost:3000/schemas/v1.json#",
+  "version": "0.0.1",
+  "name": "tag-dynamic",
+  "displayName": "Dynamic Tag Component",
+  "description": "QGDS Bootstrap 5 - Dynamic Tag Component",
+  "namespace": "qgds-bs5-local",
+  "mainFunction": "main",
+  "type": "edge",
+  "environment": [
+    { "name": "BASE_DOMAIN", "required": true },
+    { "name": "API_PATH", "required": true }
+  ],
+  "icon": {
+    "id": "queue",
+    "color": {
+      "type": "hex",
+      "value": "#ae71ff"
+    }
+  },
+  "functions": [
+    {
+      "name": "main",
+      "entry": "main.js",
+      "input": {
+        "type": "object",
+        "properties": {
+          "tagItems": {
+            "type": "string",
+            "format": "matrix-asset-uri",
+            "title": "Tag items"
+          },
+          "variant": {
+            "type": "string",
+            "title": "Variant",
+            "default": "tag-dark"
+          }
+        },
+        "required": ["tagItems"]
+      },
+      "output": {
+        "responseType": "html"        
+      }
+    }
+  ],
+  "previews": {
+    "default": {
+      "functionData": {
+        "main": {
+          "inputData": {
+            "type": "file",
+            "path": "example.data.json"
+          },
+          "wrapper": {
+            "path": "preview.html"
+          }
+        }
+      }
+    }
+  }
+}

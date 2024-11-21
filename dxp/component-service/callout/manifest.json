@@ -1,0 +1,46 @@
+{
+    "$schema": "http://localhost:3000/schemas/v1.json",
+    "version": "1.0.1",
+    "name": "callout",
+    "displayName": "Callout Component",
+    "description": "QGDS Bootstrap 5 - Callout Component",
+    "namespace": "qgds-bs5-local",
+    "mainFunction": "main",
+    "type": "edge",
+    "functions": [
+        {
+            "name": "main",
+            "entry": "main.js",
+            "input": {
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "type": "string"
+                    },
+                    "content": {
+                        "type": "string"
+                    }
+                },
+                "required": []
+            },
+            "output": {
+                "responseType": "html"                
+            }
+        }
+    ],
+    "previews": {
+        "default": {
+            "functionData": {
+                "main": {
+                    "inputData": {
+                        "type": "file",
+                        "path": "example.data.json"
+                    },
+                    "wrapper": {
+                        "path": "preview.html"
+                    }
+                }
+            }
+        }
+    }
+}

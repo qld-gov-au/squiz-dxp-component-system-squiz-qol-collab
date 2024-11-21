@@ -1,0 +1,75 @@
+{
+  "$schema": "http://localhost:3000/schemas/v1.json#",
+  "version": "0.0.2",
+  "name": "accordion-dynamic",
+  "displayName": "Dynamic Accordion Component",
+  "description": "QGDS Bootstrap 5 - Dynamic Accordion Component",
+  "namespace": "qgds-bs5-local",
+  "mainFunction": "main",
+  "type": "edge",
+  "environment": [
+    {"name": "BASE_DOMAIN", "required": true},
+    {"name": "API_PATH", "required": true}
+  ],
+  "icon": {
+    "id": "queue",
+    "color": {
+      "type": "hex",
+      "value": "#ae71ff"
+    }
+  },
+  "functions": [
+    {
+      "name": "main",
+      "entry": "main.js",
+      "input": {
+        "type": "object",
+        "properties": {
+          "root": {
+            "type": "string",
+            "format": "matrix-asset-uri",
+            "title": "Root Node"
+          },
+          "theme": {
+            "type": "string",
+            "title": "Accordion Theme",
+            "enum": ["Dark", "Light"]
+          },
+          "expand-collapse-option": {
+            "type": "string",
+            "title": "Display Expand all/Collapse all option?",
+            "enum": ["Yes", "No"]
+          },
+          "aria-label": {
+            "type": "string",
+            "title": "Accordion Label",
+            "default": "Accordion group"
+          },
+          "no-panel-message": {
+            "type": "string",
+            "title": "What do you want to print when there is no accordion panel"
+          }
+        },
+        "required": ["root"]
+      },
+      "output": {
+        "responseType": "html"        
+      }
+    }
+  ],
+  "previews": {
+    "default": {
+      "functionData": {
+        "main": {
+          "inputData": {
+            "type": "file",
+            "path": "example.data.json"
+          },
+          "wrapper": {
+            "path": "preview.html"
+          }
+        }
+      }
+    }
+  }
+}

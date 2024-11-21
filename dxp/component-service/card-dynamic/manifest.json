@@ -1,0 +1,62 @@
+{
+  "$schema": "http://localhost:3000/schemas/v1.json#",
+  "version": "0.0.2",
+  "name": "card-dynamic",
+  "displayName": "Dynamic Card Component",
+  "description": "QGDS Bootstrap 5 - Dynamic Card Component",
+  "namespace": "qgds-bs5-local",
+  "mainFunction": "main",
+  "type": "edge",
+  "environment": [
+    {"name": "BASE_DOMAIN", "required": true},
+    {"name": "API_PATH", "required": true}
+  ],
+  "icon": {
+    "id": "queue",
+    "color": {
+      "type": "hex",
+      "value": "#ae71ff"
+    }
+  },
+  "functions": [
+    {
+      "name": "main",
+      "entry": "main.js",
+      "input": {
+        "type": "object",
+        "properties": {
+          "root": {
+            "type": "string",
+            "format": "matrix-asset-uri",
+            "title": "Root Node"
+          },
+          "cols": {
+            "type": "string",
+            "title": "Number of columns",
+            "enum": ["3", "2"],
+            "default": "3"
+          }
+        },
+        "required": ["root"]
+      },
+      "output": {
+        "responseType": "html"
+      }
+    }
+  ],
+  "previews": {
+    "default": {
+      "functionData": {
+        "main": {
+          "inputData": {
+            "type": "file",
+            "path": "example.data.json"
+          },
+          "wrapper": {
+            "path": "preview.html"
+          }
+        }
+      }
+    }
+  }
+}
