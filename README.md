@@ -133,6 +133,6 @@ FEATURE_EDGE_COMPONENTS=true dxp-next cmp deploy dxp/component-service/{cmp_dire
 ### DXP Component Service 
 - https://dxp.squiz.cloud/organization/ssqld-1854/component-service/component-sets/qol-component-set-dev
 
-### Online tool for with the Manifest files
+### Online tool for working with Manifest files
 **:warning: Warning:** the DXP Component Service doesn't support all of these options.
 - https://rjsf-team.github.io/react-jsonschema-form/
