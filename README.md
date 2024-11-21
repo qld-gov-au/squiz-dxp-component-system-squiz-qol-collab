@@ -20,7 +20,7 @@ Follow these steps to get started with coreDXP on your local machine:
 
 2. **Navigate into the project directory:**
     ```bash
-    cd qld-online-components
+    cd squiz-dxp-component-system-squiz-qol-collab
     nvm use
     ```
 
