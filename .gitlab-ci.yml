@@ -1,4 +1,0 @@
-include:
-  - project: au-client-implementation/security-templates
-    ref: develop
-    file: standard.yml
