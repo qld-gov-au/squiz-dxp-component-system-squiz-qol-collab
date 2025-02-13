@@ -15,12 +15,12 @@ Follow these steps to get started with coreDXP on your local machine:
 
 1. **Clone the repository:**
     ```bash
-    git clone git@gitlab.squiz.net:au-client-implementation/qld-online-components.git
+    git clone git@github.com:qld-gov-au/squiz-dxp-component-system-squiz-qol-collab.git
     ```
 
 2. **Navigate into the project directory:**
     ```bash
-    cd qld-online-components
+    cd squiz-dxp-component-system-squiz-qol-collab
     nvm use
     ```
 
