@@ -1,0 +1,6 @@
+{
+  "sectionTitle": "Links list title",
+  "subText": "<p>Sub text for links list component</p>",
+  "bgColour": "default",
+  "linkItems": [{"linkSource": "matrix-asset://matrixIdentifier/11654"}, {"linkSource": "matrix-asset://matrixIdentifier/11658"}]
+}

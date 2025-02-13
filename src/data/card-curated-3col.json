@@ -1,0 +1,20 @@
+[
+  {
+    "heading": "Card 2",
+    "leadText": "Description of Card 2",
+    "link": "https://ssqld-web-uat.matrix.squiz.cloud/qgds-bs5/demo/component-service-components/dynamic-card-component/card-list/card-2",
+    "image": "https://ssqld-web-uat.matrix.squiz.cloud/__data/assets/image/0024/11679/mikhail-vasilyev-IFxjDdqK_0U-unsplash.jpg"
+  },
+  {
+    "heading": "Card 3",
+    "leadText": "Description of Card 3",
+    "link": "https://ssqld-web-uat.matrix.squiz.cloud/qgds-bs5/demo/component-service-components/dynamic-card-component/card-list/card-3",
+    "image": "https://ssqld-web-uat.matrix.squiz.cloud/__data/assets/image/0024/11679/mikhail-vasilyev-IFxjDdqK_0U-unsplash.jpg"
+  },
+  {
+    "heading": "Card 1",
+    "leadText": "Description of Card 1",
+    "link": "https://ssqld-web-uat.matrix.squiz.cloud/qgds-bs5/demo/component-service-components/dynamic-card-component/card-list/card-1",
+    "image": "https://ssqld-web-uat.matrix.squiz.cloud/__data/assets/image/0024/11679/mikhail-vasilyev-IFxjDdqK_0U-unsplash.jpg"
+  }
+]

@@ -1,0 +1,87 @@
+{
+  "$schema": "http://localhost:3000/schemas/v1.json#",
+  "version": "0.0.3",
+  "name": "links-list",
+  "displayName": "Links List Component",
+  "description": "QGDS Bootstrap 5 - Links List Component",
+  "namespace": "qgds-bs5-local",
+  "mainFunction": "main",
+  "type": "edge",
+  "environment": [
+    {
+      "name": "BASE_DOMAIN",
+      "required": true
+    },
+    {
+      "name": "API_PATH",
+      "required": true
+    }
+  ],
+  "functions": [
+    {
+      "name": "main",
+      "entry": "main.js",
+      "input": {
+        "type": "object",
+        "properties": {
+          "sectionTitle": {
+            "type": "string",
+            "title": "Section title"
+          },
+          "subText": {
+            "type": "FormattedText",
+            "title": "Subtitle"
+          },
+          "bgColour": {
+            "type": "string",
+            "enum": [
+              "default",
+              "light",
+              "dark"
+            ],
+            "default": "default",
+            "title": "Section background"
+          },
+          "linkItems": {
+            "title": "Link items",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "linkSource": {
+                  "type": "string",
+                  "format": "matrix-asset-uri",
+                  "title": "Link source"
+                }
+              },
+              "required": [
+                "linkSource"
+              ]
+            }
+          }
+        },
+        "required": [
+          "linkItems"
+        ]
+      },
+      "output": {
+        "responseType": "html"
+      }
+    }
+  ],
+  "previews": {
+    "default": {
+      "functionData": {
+        "main": {
+          "inputData": {
+            "type": "file",
+            "path": "example.data.json"
+          },
+          "wrapper": {
+            "path": "preview.html"
+          }
+        }
+      }
+    }
+  }
+}

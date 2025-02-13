@@ -37,7 +37,7 @@ export default defineConfig(() => {
     },
     server: {
       open: true, // Opens the app in the browser when starting the dev server
-      port: 5000,
+      port: 4000,
       proxy: {
         // Proxy all API calls or specific routes to another local server
         '/cmp': {
@@ -46,12 +46,12 @@ export default defineConfig(() => {
           rewrite: (path) => path.replace(/^\/cmp/, '/r/')
         },
         '/api': {
-          target: 'http://localhost:5000', // Your local server URL
+          target: 'http://localhost:4000', // Your local server URL
           changeOrigin: true,
           rewrite: (path) => path.replace(/^\/api/, '/src/data')
         },
         '/__dxp/cdp/setConsent': {
-          target: 'http://localhost:5000', // Your local server URL
+          target: 'http://localhost:4000', // Your local server URL
           changeOrigin: true,
           rewrite: (path) => path.replace(/\/__dxp\/cdp\/setConsent/, '/src/data/setConsent.json'),
         },
@@ -73,5 +73,23 @@ export default defineConfig(() => {
         },
       },
     },
+    test: {
+      globals: true,
+      environment: 'happy-dom' || 'node',
+      coverage: {
+        reporter: ['text-summary', 'html'],
+        include: [
+          'dxp/component-service/**/main.js',
+          'dxp/component-service/**/js/**/*.js',
+          'src/scripts/common/*.js'
+        ],
+        exclude: ['node_modules', 'tests', '**/*.test.js'],
+        reportsDirectory: 'coverage',
+        lines: 90,
+        branches: 90,
+        functions: 90,
+        statements: 90
+      }
+    }
   }
 });

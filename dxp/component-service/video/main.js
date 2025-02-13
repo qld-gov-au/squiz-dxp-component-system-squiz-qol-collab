@@ -3,7 +3,7 @@
  * Common js module to support DXP Component Service.
  */
 export default {
-  async main(input, info) {
+  async main(input) {
       // const formatDuration = require('./static/server-formatDuration.js');
       // const formatDuration = require('formatDuration');
 
@@ -63,7 +63,7 @@ export default {
             durationString = parts.join(":");
           }
           return durationString;
-      }
+      };
 
       return `
           <section class="video not-ready ${!input.thumbnail ? 'empty-thumbnail': ''} ${input.videoSize}">
@@ -96,4 +96,4 @@ export default {
           </section>
       `;
   }
-}
+};

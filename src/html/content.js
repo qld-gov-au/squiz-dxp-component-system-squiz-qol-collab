@@ -1,11 +1,12 @@
 // template imports
-import { Header } from "@global_components/header/header";
-import { Footer } from "@global_components/footer/footer";
-import { Sidebar } from "@global_components/content/sidebar";
+import {Header} from '@global_components/header/header';
+import {Footer} from '@global_components/footer/footer';
+import {Sidebar} from '@global_components/content/sidebar';
+import {TOC} from '@global_components/content/toc';
 
 // render template
 export default async function () {
-  return `
+    return `
     ${Header}
     
     <main>
@@ -13,8 +14,8 @@ export default async function () {
         <div class="container qld-content">
           <div class="row">
 
-            <!--@@ ${(Sidebar, "")} @@-->
-
+          ${TOC}
+          
 
             <div class="col-12 col-lg-8 ps-lg-64 qld-content-body" id="content">
               <h1>2 column content page</h1>
@@ -39,12 +40,14 @@ export default async function () {
               <!--@@ cmp qgds-bs5-local/blockquote @@-->
               <h2>callout</h2>
               <!--@@ cmp qgds-bs5-local/callout @@-->
-              <h2>inpagealert</h2>
-              <!--@@ cmp qgds-bs5-local/inpagealert @@-->
+              <h2>Inpage Alert</h2>
+              <!--@@ cmp qgds-bs5-local/inpage-alert @@-->
               <h2>table</h2>
               <!--@@ cmp qgds-bs5-local/table @@-->
               <h2>video</h2>
               <!--@@ cmp qgds-bs5-local/video @@-->
+              <h2>Links list</h2>
+              <!--@@ cmp qgds-bs5-local/links-list @@-->
             </div>
 
           </div>

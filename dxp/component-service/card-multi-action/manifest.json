@@ -1,0 +1,84 @@
+{
+  "$schema": "http://localhost:3000/schemas/v1.json",
+  "name": "card-multi-action",
+  "namespace": "qgds-bs5-local",
+  "description": "QGDS Bootstrap 5 - Card Multi-action",
+  "displayName": "Card Multi-action",
+  "version": "0.0.2",
+  "type": "edge",
+  "mainFunction": "main",
+  "environment": [
+    {"name": "BASE_DOMAIN", "required": true},
+    {"name": "API_PATH", "required": true}
+  ],
+  "icon": {
+    "id": "queue",
+    "color": {
+      "type": "hex",
+      "value": "#ae71ff"
+    }
+  },
+  "functions": [
+    {
+      "name": "main",
+      "entry": "main.js",
+      "input": {
+        "type": "object",
+        "properties": {
+          "cardTitle": {
+            "type": "string",
+            "title": "Title"
+          },
+          "subText": {
+            "type": "FormattedText",
+            "title": "Sub-text"
+          },
+          "image": {
+            "type": "SquizImage",
+            "title": "Image"
+          },
+          "imagePosition": {
+            "type": "string",
+            "title": "Image position",
+            "enum": ["right", "left"],
+            "default": "right"
+          },
+          "linkItems": {
+            "title": "Links items",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "linkSource": {
+                  "type": "string",
+                  "format": "matrix-asset-uri",
+                  "title": "Link source"
+                }
+              },
+              "required": ["linkSource"]
+            }
+          }
+        },
+        "required": ["cardTitle", "image"]
+      },
+      "output": {
+        "responseType": "html"
+      }
+    }
+  ],
+  "previews": {
+    "default": {
+      "functionData": {
+        "main": {
+          "inputData": {
+            "type": "file",
+            "path": "example.data.json"
+          },
+          "wrapper": {
+            "path": "preview.html"
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "sectionTitle": "Explore our projects and initiatives",
+  "bgColour": "default",
+  "cards": [
+    {"cardSource": "matrix-asset://matrixIdentifier/11658"},
+    {"cardSource": "matrix-asset://matrixIdentifier/11662"},
+    {"cardSource": "matrix-asset://matrixIdentifier/11654"}
+  ],
+  "CTALink": "https://ssqld-web-uat.matrix.squiz.cloud/qgds-bs5/demo/component-service-components/events",
+  "CTAText": "View all"
+}

@@ -1,0 +1,22 @@
+.design-preview-header {
+    background-color: #ADD8E6; // lightblue
+    padding: 15px;
+
+    .design-preview-header__controls {
+        width: 300px;
+    }
+}
+
+.debug-panel {
+    padding: 20px;
+    //border: dashed 2px #F00;
+    background: rgb(255 182 193);    
+    margin-bottom: 30px;
+
+    h4 {
+        color: rgb(186 33 56);
+        margin: 0;
+        margin-bottom: 10px;
+        padding: 0;
+    }
+}

@@ -11,8 +11,8 @@ export default {
             const apiQuery = '/pagination?root=' + assetId;
             // ---------
             // SWITCH these over once the API becomes available
-            // const apiUrl = `${info.env.BASE_DOMAIN}${info.env.API_PATH}${apiQuery}`;
-            const apiUrl = "http://localhost:5000/src/data/pagination.json";
+            const apiUrl = `${info.env.BASE_DOMAIN}${info.env.API_PATH}${apiQuery}`;
+            //const apiUrl = "http://localhost:5000/src/data/pagination.json";
             // ---------
             const response = await fetch(apiUrl);
             if (!response.ok) {
@@ -37,8 +37,7 @@ export default {
                             ` : `
                             <a class="page-link" href="${page.href}" aria-label="${page.arialabel}">${page.linktext}</a>
                             `}
-                        </li>`}).join('')}
-
+                        </li>`;}).join('')}
             
                     ${next_options ? `
                     <li class="page-item next">
@@ -60,4 +59,4 @@ export default {
             console.error('Component render error', error);
         }
     }
-}
+};

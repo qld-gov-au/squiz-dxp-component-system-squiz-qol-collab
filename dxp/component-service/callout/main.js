@@ -3,7 +3,7 @@
  * Common js module to support DXP Component Service.
  */
 export default {
-  async main(input, info) {
+  async main(input) {
     return `
       <div class="callout">
           ${input.title ? `
@@ -14,4 +14,4 @@ export default {
       </div>
     `;
   }
-}
+};

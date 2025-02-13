@@ -1,6 +1,6 @@
 {
   "$schema": "http://localhost:3000/schemas/v1.json#",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "name": "card-dynamic",
   "displayName": "Dynamic Card Component",
   "description": "QGDS Bootstrap 5 - Dynamic Card Component",

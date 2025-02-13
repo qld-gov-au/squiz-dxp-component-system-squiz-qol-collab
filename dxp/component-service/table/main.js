@@ -1,5 +1,5 @@
 export default {
-  async main(input, info) {
+  async main(input) {
 
       function makeHeader() {
           if (!input.headers || !input.headers.length) {
@@ -74,4 +74,4 @@ export default {
         </div>
       `;
   }
-}
+};

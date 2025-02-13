@@ -1,0 +1,26 @@
+[
+  {
+    "heading": "Event 1 Fontainebleau",
+    "leadText": "Fontainebleau Castle is a magnificent French royal residence blending Renaissance and classical architecture, surrounded by lush forests.",
+    "link": "https://ssqld-web-uat.matrix.squiz.cloud/qgds-bs5/demo/component-service-components/events/event-1",
+    "image": "https://ssqld-web-uat.matrix.squiz.cloud/__data/assets/image/0014/12902/alana-harris-XoFJmzXgm5I-unsplash.jpg",
+    "startDate": "29th Mar 2025",
+    "endDate": ""
+  },
+  {
+    "heading": "Event 2 Open Book",
+    "leadText": "Reading a book is a journey into new worlds, ideas, and perspectives, all from the comfort of your imagination.",
+    "link": "https://ssqld-web-uat.matrix.squiz.cloud/qgds-bs5/demo/component-service-components/events/event-2",
+    "image": "https://ssqld-web-uat.matrix.squiz.cloud/__data/assets/image/0015/12903/shayan-rostami-KarcV9392Po-unsplash.jpg",
+    "startDate": "12th Apr 2025",
+    "endDate": "14th Apr 2025"
+  },
+  {
+    "heading": "Event 3 Paris Bridge",
+    "leadText": "The Alexandre III Bridge in Paris is a stunning Beaux-Arts masterpiece, adorned with ornate sculptures and gilded details, symbolizing the elegance of the Belle Époque.",
+    "link": "https://ssqld-web-uat.matrix.squiz.cloud/qgds-bs5/demo/component-service-components/events/event-3",
+    "image": "https://ssqld-web-uat.matrix.squiz.cloud/__data/assets/image/0017/12905/leonard-cotte-R5scocnOOdM-unsplash.jpg",
+    "startDate": "4th Aug 2025",
+    "endDate": ""
+  }
+]

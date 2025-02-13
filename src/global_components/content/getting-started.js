@@ -1,8 +1,10 @@
-export const getStarted = `<div class="container mt-5">
+import { TOC } from '@global_components/content/toc';
 
-
+const repoNotes = `<div class="container mt-5">
       <!-- Folder Structure Section -->
       <section id="folder-structure" class="mb-5">
+
+        
         <h2>Folder Structure</h2>
         <p>The Kernel repository has the following key folders and files:</p>
         <ul>
@@ -91,3 +93,17 @@ export const getStarted = `<div class="container mt-5">
       </section>
 
     </div>`;
+
+
+    export const getStarted = ` <main>
+      <div class="container-fluid">
+        <div class="container qld-content">
+          <div class="row">
+          ${TOC}              
+            <div class="col-12 col-lg-8 ps-lg-64 qld-content-body" id="content">              
+            ${repoNotes}
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>`

@@ -58,4 +58,4 @@ export default {
             console.error('Component render error', error);
         }
     }
-}
+};

@@ -1,0 +1,73 @@
+{
+  "$schema": "http://localhost:3000/schemas/v1.json",
+  "version": "0.0.4",
+  "name": "card-related-3col",
+  "namespace": "qgds-bs5-local",
+  "description": "QGDS Bootstrap 5 - Card Related 3 Columns",
+  "displayName": "Card Related 3 Columns",
+  "mainFunction": "main",
+  "type": "edge",
+  "environment": [
+    {"name": "BASE_DOMAIN", "required": true},
+    {"name": "API_PATH", "required": true}
+  ],
+  "icon": {
+    "id": "queue",
+    "color": {
+      "type": "hex",
+      "value": "#ae71ff"
+    }
+  },
+  "functions": [
+    {
+      "name": "main",
+      "entry": "main.js",
+      "input": {
+        "type": "object",
+        "properties": {
+          "sectionTitle": {
+            "type": "string",
+            "title": "Section title"
+          },
+          "bgColour": {
+            "type": "string",
+            "enum": ["default", "light", "dark"],
+            "default": "default",
+            "title": "Section background"
+          },
+          "tag": {
+            "title": "Tag",
+            "type": "string"
+          },
+          "CTALink": {
+            "type": "string",
+            "title": "CTA button url"
+          },
+          "CTAText": {
+            "type": "string",
+            "title": "CTA button text"
+          }
+        },
+        "required": ["tag"]
+      },
+      "output": {
+        "responseType": "html"
+      }
+    }
+  ],
+  "previews": {
+    "default": {
+      "functionData": {
+        "main": {
+          "inputData": {
+            "type": "file",
+            "path": "example.data.json"
+          },
+          "wrapper": {
+            "path": "preview.html"
+          }
+        }
+      }
+    }
+  }
+}

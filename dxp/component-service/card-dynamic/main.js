@@ -1,7 +1,7 @@
 import {formatMatrixURItoID} from '../../02_utils/dxp-utils';
 
 /**
- * Accordion - dynamic component
+ * Cards - dynamic component
  */
 export default {
     async main(input, info) {
@@ -10,8 +10,8 @@ export default {
             const apiQuery = '/card-dynamic?root=' + assetId;
             // ---------
             // SWITCH these over once the API becomes available
-            // const apiUrl = `${info.env.BASE_DOMAIN}${info.env.API_PATH}${apiQuery}`;
-            const apiUrl = 'http://localhost:5000/src/data/card-dynamic.json';
+            const apiUrl = `${info.env.BASE_DOMAIN}${info.env.API_PATH}${apiQuery}`;
+            // const apiUrl = 'http://localhost:5000/src/data/card-dynamic.json';
             // ---------
             const response = await fetch(apiUrl);
             if (!response.ok) {
@@ -21,7 +21,8 @@ export default {
 
             const output = `${
                 data
-                    ? `<!-- QGDS Component: Card list -->
+                    ? `
+                    <!-- QGDS Component: Card list -->
           <div class="row row-cols-1 row-cols-md-2 row-cols-lg-${input.cols} g-4">
             ${data
                 .map((item) => {

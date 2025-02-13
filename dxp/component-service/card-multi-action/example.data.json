@@ -1,0 +1,22 @@
+{
+  "cardTitle": "Explore our projects and initiatives",
+  "subText": "This is some extra text...",
+  "image": {
+    "name": "My Image",
+    "alt": "The alt if the image doesn't load",
+    "caption": "This above is a loaded image",
+    "imageVariations": {
+      "original": {
+        "url": "https://placehold.co/600x400",
+        "width": 100,
+        "height": 100,
+        "byteSize": 1000,
+        "mimeType": "image/jpeg",
+        "aspectRatio": "1:1",
+        "sha1Hash": "1234567890abcdef1234567890abcdef12345678"
+      }
+    }
+  },
+  "imagePosition": "left",
+  "linkItems": [{"linkSource": "matrix-asset://matrixIdentifier/11654"}, {"linkSource": "matrix-asset://matrixIdentifier/11658"}]
+}

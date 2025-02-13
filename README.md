@@ -15,12 +15,12 @@ Follow these steps to get started with coreDXP on your local machine:
 
 1. **Clone the repository:**
     ```bash
-    git clone git@github.com:qld-gov-au/squiz-dxp-component-system-squiz-qol-collab.git
+    git clone git@gitlab.squiz.net:au-client-implementation/qld-online-components.git
     ```
 
 2. **Navigate into the project directory:**
     ```bash
-    cd squiz-dxp-component-system-squiz-qol-collab
+    cd qld-online-components
     nvm use
     ```
 
@@ -53,9 +53,9 @@ Follow these steps to get started with coreDXP on your local machine:
 **When you run ```npm run dev``` two servers get spun up**
 
 - DXP Preview: http://localhost:3000/
-- Frontend Design Preview: http://localhost:5000/
+- Frontend Design Preview: http://localhost:4000/
 
-View the index page for more information on how to use http://localhost:5000/
+View the index page for more information on how to use http://localhost:4000/
 
 
 # Repository Folder Structure
@@ -89,7 +89,7 @@ Open a template from /src/html/ (Example: /src/html/homepage.js)
 
 - Add the component import reference. Example: ```<!--@@ cmp kernel/hello-world @@-->```
 - Start up the local dev server: ```npm run dev```
-- Preview the front end! Visit http://localhost:5000/
+- Preview the front end! Visit http://localhost:4000/
 
 ## Bundling for deployment
 To package the project for production: 
@@ -109,9 +109,62 @@ npm run build
 dxp-next auth login --tenant=ssqld-1854
 ```
 
+Ensure the component's version is updated according to semantic versioning (SemVer). Then, deploy the component using:
+
 ```bash
-# Deploy Edge Component to the DXP
-FEATURE_EDGE_COMPONENTS=true dxp-next cmp deploy dxp/component-service/{cmp_directory}
+npm run deploy --name=<component_name>
+```
+
+This command runs all the tests before deploying the specified component:
+
+```bash
+npm run deploy:all-tests --name=<component_name>
+```
+
+
+## Aliases
+
+Within the `/src` folder and styles, you can use aliases defined in vite.config.js. Avoid deep relative paths by using aliases like `@images/logo.svg`.
+
+## Utils
+
+Utility functions for components are stored in `dxp/component-service/utils`:
+
+`xss.js` - Prevents XSS attacks by sanitizing inputs.
+`html.js` - Tags template literals for syntax highlighting, readability, and structured HTML generation.
+
+
+
+## IDE Config Suggestions
+
+### Format on save
+
+It is recommended to use the Prettier's - `Format on save` settings that should be available for your IDE.
+
+For VS code please follow these steps:
+
+To change this setting, press `COMMAND + ,` on macOS, or `CTRL + ,` on Windows to open the Settings menu.
+Once the menu is open, search for `Editor: Format On Save` and make sure that option is checked.
+
+### Highlighting template literals
+
+To ensure you have properly highlighted HTML template literals install `es6-string-html` or `lit-html` extension.
+
+- `es6-string-html` - by adding `/* HTML */` before template literal you will have your template literal highlighted. If used with Prettier you will have formatted and highlighted text.
+- `lit-html` - by exporting util variable and adding it as `html` before template literal you will have your template literal highlighted and it will auto-close your HTML elements. If used with Prettier you will have formatted and highlighted text.
+
+## Linters & Formatters
+
+The project uses Prettier, ESLint, and Stylelint. Review the `package.json` to find commands to run these before pushing changes.
+
+## Unit Tests 
+
+The project includes tests written in Vitest. They cover all main.js files and additional scripts related to the components.
+
+To run the tests locally, use:
+
+```bash
+npm run test
 ```
 
 
@@ -122,6 +175,7 @@ FEATURE_EDGE_COMPONENTS=true dxp-next cmp deploy dxp/component-service/{cmp_dire
 - https://docs.squiz.net/component-service/latest/tutorials/components-at-edge/index.html
 
 ### Example CSCs
+- https://ssqld-web-uat.matrix.squiz.cloud/qgds-site/component-examples
 - https://ssqld-web-uat.matrix.squiz.cloud/qgds-bs5/demo/mvaldman/accordion-example/
 - https://ssqld-web-uat.matrix.squiz.cloud/qgds-bs5/demo/mvaldman/accordion-dynamic-example/
 - https://ssqld-web-uat.matrix.squiz.cloud/qgds-bs5/demo/component-service-components/test-dynamic-card/
@@ -132,7 +186,3 @@ FEATURE_EDGE_COMPONENTS=true dxp-next cmp deploy dxp/component-service/{cmp_dire
 
 ### DXP Component Service 
 - https://dxp.squiz.cloud/organization/ssqld-1854/component-service/component-sets/qol-component-set-dev
-
-### Online tool for working with Manifest files
-**:warning: Warning:** the DXP Component Service doesn't support all of these options.
-- https://rjsf-team.github.io/react-jsonschema-form/

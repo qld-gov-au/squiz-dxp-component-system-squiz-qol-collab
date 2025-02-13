@@ -1,5 +1,5 @@
 export default {
-  async main(input, info) {
+  async main(input) {
     function headingContent() {
       if (!input.heading) {
         return;
@@ -14,4 +14,4 @@ export default {
         ${input.content}
     </div>`;
   }
-}
+};

@@ -3,7 +3,7 @@
  * Common js module to support DXP Component Service.
  */
 export default {
-    async main(input, info) {
+    async main(input) {
         const items = input.accordionItems.map(item => 
             `<div class="accordion-item">
                 <h2 class="accordion-header" id="heading-${item.id}">
@@ -36,4 +36,4 @@ export default {
         </div>
         `;
     }
-}
+};

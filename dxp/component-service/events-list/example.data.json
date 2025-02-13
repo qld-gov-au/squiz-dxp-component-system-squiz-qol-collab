@@ -1,0 +1,7 @@
+{
+  "sectionTitle": "What's on",
+  "bgColour": "default",
+  "root": "matrix-asset://matrixIdentifier/12898",
+  "CTALink": "https://ssqld-web-uat.matrix.squiz.cloud/qgds-bs5/demo/component-service-components/events",
+  "CTAText": "View more"
+}

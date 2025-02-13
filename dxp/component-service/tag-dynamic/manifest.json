@@ -1,6 +1,6 @@
 {
   "$schema": "http://localhost:3000/schemas/v1.json#",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "name": "tag-dynamic",
   "displayName": "Dynamic Tag Component",
   "description": "QGDS Bootstrap 5 - Dynamic Tag Component",
@@ -8,8 +8,8 @@
   "mainFunction": "main",
   "type": "edge",
   "environment": [
-    { "name": "BASE_DOMAIN", "required": true },
-    { "name": "API_PATH", "required": true }
+    {"name": "BASE_DOMAIN", "required": true},
+    {"name": "API_PATH", "required": true}
   ],
   "icon": {
     "id": "queue",
@@ -39,7 +39,7 @@
         "required": ["tagItems"]
       },
       "output": {
-        "responseType": "html"        
+        "responseType": "html"
       }
     }
   ],

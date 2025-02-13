@@ -1,10 +1,10 @@
-import { formatMatrixURItoID } from "../../02_utils/dxp-utils";
+//import { formatMatrixURItoID } from "../../02_utils/dxp-utils";
 
 /**
  * Accordion - dynamic component
  */
 export default {
-    async main(input, info) {
+    async main(input) {
         try {
 
             const output = `<!-- QGDS Partial: card -->
@@ -72,4 +72,4 @@ export default {
             console.error('Component render error', error);
         }
     }
-}
+};
