@@ -1,0 +1,74 @@
+{
+  "$schema": "http://localhost:3000/schemas/v1.json#",
+  "version": "0.0.1",
+  "name": "card-news-3col",
+  "displayName": "Card Latest News Component",
+  "description": "QGDS Bootstrap 5 - Card Latest News Component",
+  "namespace": "qgds-bs5-local",
+  "mainFunction": "main",
+  "type": "edge",
+  "environment": [
+    {"name": "BASE_DOMAIN", "required": true},
+    {"name": "API_PATH", "required": true}
+  ],
+  "icon": {
+    "id": "queue",
+    "color": {
+      "type": "hex",
+      "value": "#ae71ff"
+    }
+  },
+  "functions": [
+    {
+      "name": "main",
+      "entry": "main.js",
+      "input": {
+        "type": "object",
+        "properties": {
+          "sectionTitle": {
+            "type": "string",
+            "title": "Section title"
+          },
+          "bgColour": {
+            "type": "string",
+            "enum": ["default", "light", "dark"],
+            "default": "default",
+            "title": "Section background"
+          },
+          "root": {
+            "type": "string",
+            "format": "matrix-asset-uri",
+            "title": "Root Node"
+          },
+          "CTALink": {
+            "type": "string",
+            "title": "CTA button url"
+          },
+          "CTAText": {
+            "type": "string",
+            "title": "CTA button text"
+          }
+        },
+        "required": ["root"]
+      },
+      "output": {
+        "responseType": "html"
+      }
+    }
+  ],
+  "previews": {
+    "default": {
+      "functionData": {
+        "main": {
+          "inputData": {
+            "type": "file",
+            "path": "example.data.json"
+          },
+          "wrapper": {
+            "path": "preview.html"
+          }
+        }
+      }
+    }
+  }
+}
